@@ -50,6 +50,7 @@ namespace FishTemp
                         DataTime.Text = Convert.ToDateTime(line).ToString("yy.mm.dd h:mm");
                         line = sr.ReadLine();
                         Temperature.Text = line;
+                        line = sr.ReadLine();
                     }
                 }
             }
@@ -57,11 +58,13 @@ namespace FishTemp
 
         private void Run_Click(object sender, EventArgs e)
         {
-            switch (FishName.Text)
+/*            switch (FishName.Text)
             {
                 case "Сенга"
+                    if ()
+                    break;
 
-            }
+            }*/
         }
     }
 }
