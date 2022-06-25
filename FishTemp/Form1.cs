@@ -60,7 +60,7 @@ namespace FishTemp
 
         private void Run_Click(object sender, EventArgs e)
         {
-            int[] temp = new int[Convert.ToInt32(Temperature.Text)];
+            int[] temp = new int[] { Convert.ToInt32(Temperature.Text)};
             switch (FishName.Text)
             {
                 case "Сенга":
