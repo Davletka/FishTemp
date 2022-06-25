@@ -40,7 +40,14 @@
             this.TimeMax = new System.Windows.Forms.TextBox();
             this.MaxTemp = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Table = new System.Windows.Forms.DataGridView();
+            this.time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fact = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Norm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ErrorNorm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Table)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -80,6 +87,7 @@
             this.btnSave.TabIndex = 10;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnOpen
             // 
@@ -154,11 +162,58 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Window;
+            this.panel2.Controls.Add(this.Table);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(425, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(470, 450);
             this.panel2.TabIndex = 2;
+            // 
+            // Table
+            // 
+            this.Table.AllowUserToAddRows = false;
+            this.Table.AllowUserToDeleteRows = false;
+            this.Table.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.time,
+            this.Fact,
+            this.Norm,
+            this.ErrorNorm});
+            this.Table.Location = new System.Drawing.Point(15, 12);
+            this.Table.Name = "Table";
+            this.Table.ReadOnly = true;
+            this.Table.Size = new System.Drawing.Size(443, 323);
+            this.Table.TabIndex = 1;
+            this.Table.Text = "dataGridView1";
+            // 
+            // time
+            // 
+            this.time.Frozen = true;
+            this.time.HeaderText = "Время";
+            this.time.Name = "time";
+            this.time.ReadOnly = true;
+            // 
+            // Fact
+            // 
+            this.Fact.Frozen = true;
+            this.Fact.HeaderText = "Факт";
+            this.Fact.Name = "Fact";
+            this.Fact.ReadOnly = true;
+            // 
+            // Norm
+            // 
+            this.Norm.Frozen = true;
+            this.Norm.HeaderText = "Норма";
+            this.Norm.Name = "Norm";
+            this.Norm.ReadOnly = true;
+            // 
+            // ErrorNorm
+            // 
+            this.ErrorNorm.Frozen = true;
+            this.ErrorNorm.HeaderText = "Отклонение от нормы";
+            this.ErrorNorm.Name = "ErrorNorm";
+            this.ErrorNorm.ReadOnly = true;
             // 
             // Form1
             // 
@@ -171,6 +226,8 @@
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Table)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -189,6 +246,11 @@
         private System.Windows.Forms.Button Run;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnOpen;
+        private System.Windows.Forms.DataGridView Table;
+        private System.Windows.Forms.DataGridViewTextBoxColumn time;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fact;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Norm;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ErrorNorm;
     }
 }
 

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Globalization;
 
 namespace FishTemp
 {
@@ -49,6 +50,7 @@ namespace FishTemp
                     {
                         DataTime.Text = Convert.ToDateTime(line).ToString("yy.mm.dd h:mm");
                         line = sr.ReadLine();
+                        list.Add(line);
                         Temperature.Text = line;
                         line = sr.ReadLine();
                     }
@@ -58,13 +60,28 @@ namespace FishTemp
 
         private void Run_Click(object sender, EventArgs e)
         {
-/*            switch (FishName.Text)
+            int[] temp = new int[Convert.ToInt32(Temperature.Text.Length)];
+            switch (FishName.Text)
             {
-                case "Сенга"
-                    if ()
-                    break;
+                case "Сенга":
+                    for (int i = 0; i < temp.Length; i++)
+                    {
+                        if (Convert.ToInt32(Temperature.Text) < Convert.ToInt32(MinTemp.Text))
+                        {
 
-            }*/
+                            DateTime dt = DateTime.ParseExact(DataTime.Text, "dd.MM.yy H:mm:", CultureInfo.InvariantCulture);
+                            MessageBox.Show((dt.AddMinutes(10)).ToString());
+
+                        }
+                    }
+                break;
+
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
