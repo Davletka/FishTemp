@@ -134,6 +134,7 @@
             this.TimeMin.PlaceholderText = "Допустимое время";
             this.TimeMin.Size = new System.Drawing.Size(126, 23);
             this.TimeMin.TabIndex = 4;
+            this.TimeMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TimeMin_KeyPress);
             // 
             // MinTemp
             // 
@@ -142,6 +143,7 @@
             this.MinTemp.PlaceholderText = "Мин температура";
             this.MinTemp.Size = new System.Drawing.Size(147, 23);
             this.MinTemp.TabIndex = 3;
+            this.MinTemp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MinTemp_KeyPress);
             // 
             // TimeMax
             // 
@@ -150,6 +152,7 @@
             this.TimeMax.PlaceholderText = "Допустимое время";
             this.TimeMax.Size = new System.Drawing.Size(126, 23);
             this.TimeMax.TabIndex = 2;
+            this.TimeMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TimeMax_KeyPress);
             // 
             // MaxTemp
             // 
@@ -158,6 +161,7 @@
             this.MaxTemp.PlaceholderText = "Макс температура";
             this.MaxTemp.Size = new System.Drawing.Size(147, 23);
             this.MaxTemp.TabIndex = 1;
+            this.MaxTemp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MaxTemp_KeyPress);
             // 
             // panel2
             // 
